@@ -1,25 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_print_params.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tiskow <tiskow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/02 19:28:47 by tiskow            #+#    #+#             */
-/*   Updated: 2016/11/03 14:43:33 by tiskow           ###   ########.fr       */
+/*   Created: 2016/11/03 00:53:36 by tiskow            #+#    #+#             */
+/*   Updated: 2016/11/03 00:58:04 by tiskow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strcmp(char *s1, char *s2)
+void	ft_putchar(char c);
+
+int		main(int ac, char **ag)
 {
 	int i;
+	int j;
 
-	i = 0;
-	while (s1[i] || s2[i])
+	i = 1;
+	j = 0;
+	ac = ac;
+	if (ag[i])
 	{
-		if (s1[i] != s2[i])
-			return (((s1[i] - s2[i]) < 0) ? -1 : 1);
-		i++;
+		while (ag[i])
+		{
+			while (ag[i][j])
+			{
+				ft_putchar(ag[i][j]);
+				j++;
+			}
+			ft_putchar(10);
+			j = 0;
+			i++;
+		}
 	}
-	return (0);
 }

@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_poiint.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tiskow <tiskow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/02 19:28:47 by tiskow            #+#    #+#             */
-/*   Updated: 2016/11/03 14:43:33 by tiskow           ###   ########.fr       */
+/*   Created: 2016/11/03 13:45:03 by tiskow            #+#    #+#             */
+/*   Updated: 2016/11/03 13:45:06 by tiskow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strcmp(char *s1, char *s2)
-{
-	int i;
+#ifndef __FT_POINT_H
+# define __FT_POINT_H
 
-	i = 0;
-	while (s1[i] || s2[i])
-	{
-		if (s1[i] != s2[i])
-			return (((s1[i] - s2[i]) < 0) ? -1 : 1);
-		i++;
-	}
-	return (0);
-}
+typedef	struct	s_point
+{
+	int		x;
+	int		y;
+}				t_point;
+
+void			set_point(t_point *point);
+
+#endif
