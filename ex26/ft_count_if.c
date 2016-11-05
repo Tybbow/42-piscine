@@ -6,7 +6,7 @@
 /*   By: tiskow <tiskow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 15:30:56 by tiskow            #+#    #+#             */
-/*   Updated: 2016/11/03 15:36:50 by tiskow           ###   ########.fr       */
+/*   Updated: 2016/11/05 07:20:17 by tiskow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int		ft_count_if(char **tab, int(*f)(char*))
 	count = 0;
 	while (tab[i])
 	{
-		if (f(tab[i]))
+		if (f(tab[i]) == 1)
 			count++;
 		i++;
 	}

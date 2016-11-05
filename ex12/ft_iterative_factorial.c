@@ -6,7 +6,7 @@
 /*   By: tiskow <tiskow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/02 18:09:22 by tiskow            #+#    #+#             */
-/*   Updated: 2016/11/02 18:22:35 by tiskow           ###   ########.fr       */
+/*   Updated: 2016/11/05 07:16:25 by tiskow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@ int		ft_iterarive_factorial(int nb)
 {
 	int n;
 
-	n = 1;
 	if (nb == 0 || nb == 1)
 		return (1);
 	if (nb < 0)
 		return (0);
-	if (nb > 1)
+	if (nb > 1 && nb < 12)
 	{
+		n = 1;
 		nb++;
 		while (--nb > 1)
 			n = n * nb;

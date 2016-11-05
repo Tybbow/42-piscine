@@ -6,7 +6,7 @@
 /*   By: tiskow <tiskow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 00:25:45 by tiskow            #+#    #+#             */
-/*   Updated: 2016/11/04 01:29:01 by tiskow           ###   ########.fr       */
+/*   Updated: 2016/11/05 07:20:28 by tiskow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 void	ft_putchar(char c)
 {
-			write(1, &c, 1);
+	write(1, &c, 1);
 }
 
 void	ft_putstr(char *str)

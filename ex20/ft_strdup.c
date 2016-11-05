@@ -6,7 +6,7 @@
 /*   By: tiskow <tiskow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 02:13:30 by tiskow            #+#    #+#             */
-/*   Updated: 2016/11/03 02:18:24 by tiskow           ###   ########.fr       */
+/*   Updated: 2016/11/05 07:19:17 by tiskow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strdup(char *src)
 	char	*tmp;
 
 	tmp = (char *)malloc((sizeof(char *) * ft_strlen(src) + 1));
-	if (!tmp)
+	if (!tmp || !src)
 		return (NULL);
 	i = 0;
 	while (src[i])
