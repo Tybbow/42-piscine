@@ -6,11 +6,11 @@
 /*   By: tiskow <tiskow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 15:17:41 by tiskow            #+#    #+#             */
-/*   Updated: 2016/11/03 15:21:19 by tiskow           ###   ########.fr       */
+/*   Updated: 2016/11/06 14:53:51 by tiskow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_foreach(int *tab, int length, void(*f)(int))
+void	ft_foreach(int *tab, int length, void (*f)(int))
 {
 	int i;
 

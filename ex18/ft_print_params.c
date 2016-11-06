@@ -6,32 +6,30 @@
 /*   By: tiskow <tiskow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 00:53:36 by tiskow            #+#    #+#             */
-/*   Updated: 2016/11/03 00:58:04 by tiskow           ###   ########.fr       */
+/*   Updated: 2016/11/06 16:23:11 by tiskow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_putchar(char c);
 
-int		main(int ac, char **ag)
+void	ft_putstr(char *str)
+{
+	while (*str != '\0')
+	{
+		ft_putchar(*str);
+		str++;
+	}
+}
+
+int		main(int argc, char **argv)
 {
 	int i;
-	int j;
 
 	i = 1;
-	j = 0;
-	ac = ac;
-	if (ag[i])
+	while (i < argc)
 	{
-		while (ag[i])
-		{
-			while (ag[i][j])
-			{
-				ft_putchar(ag[i][j]);
-				j++;
-			}
-			ft_putchar(10);
-			j = 0;
-			i++;
-		}
+		ft_putstr(argv[i++]);
+		ft_putstr("\n");
 	}
+	return (0);
 }

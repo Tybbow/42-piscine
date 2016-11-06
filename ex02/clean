@@ -1,1 +1,2 @@
-find ./ \( -name '*~' -o -name '#*#' \)
+#!/bin/sh
+find ./ \( -name '*~' -o -name '#*#' \) | xargs rm

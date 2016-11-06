@@ -6,65 +6,74 @@
 /*   By: tiskow <tiskow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 00:58:55 by tiskow            #+#    #+#             */
-/*   Updated: 2016/11/06 17:26:29 by tiskow           ###   ########.fr       */
+/*   Updated: 2016/11/06 16:59:15 by tiskow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
 void	ft_putchar(char c);
-
-int		ft_strcmp(char *s1, char *s2)
-{
-	while ((*s1 == *s2) && (*s1) && (*s2))
-	{
-		s1++;
-		s2++;
-	}
-	return (*s1 - *s2);
-}
 
 void	ft_putstr(char *str)
 {
-	while (*str != '\0')
+	int i;
+
+	i = 0;
+	while (str[i] != '\0')
 	{
-		ft_putchar(*str);
-		str++;
+		ft_putchar(str[i]);
+		i++;
 	}
 }
 
-void	sort_params(char **argv, int argc)
+void	ft_swap(char **a, char **b)
 {
-	int		i;
-	char	*tmp;
-	int		sort;
+	char *tmp;
+
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
+}
+
+int		ft_strcmp(char *s1, char *s2)
+{
+	int i;
+
+	i = 0;
+	while (s1[i] || s2[i])
+	{
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
+		i++;
+	}
+	return (0);
+}
+
+void	ft_tri(char **array, int lenght)
+{
+	int order;
+	int i;
 
 	i = 1;
-	sort = 1;
-	while (i < argc - 1)
+	order = 1;
+	while (i < lenght - 1)
 	{
-		if (ft_strcmp(argv[i], argv[i + 1]) > 0)
+		if (ft_strcmp(array[i], array[i + 1]) > 0)
 		{
-			tmp = argv[i + 1];
-			argv[i + 1] = argv[i];
-			argv[i] = tmp;
-			sort = 0;
+			ft_swap(&array[i + 1], &array[i]);
+			order = 0;
 		}
 		i++;
 	}
-	if (sort == 0)
-		sort_params(argv, argc);
 }
 
-int		main(int argc, char **argv)
+int		main(int ac, char **ag)
 {
 	int i;
 
 	i = 1;
-	sort_params(argv, argc);
-	while (i < argc)
+	ft_tri(ag, ac);
+	while (i < ac)
 	{
-		ft_putstr(argv[i++]);
+		ft_putstr(ag[i++]);
 		ft_putstr("\n");
 	}
 	return (0);

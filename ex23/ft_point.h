@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_point.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tiskow <tiskow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/02 19:25:23 by tiskow            #+#    #+#             */
-/*   Updated: 2016/11/06 16:25:37 by tiskow           ###   ########.fr       */
+/*   Created: 2016/11/03 13:45:03 by tiskow            #+#    #+#             */
+/*   Updated: 2016/11/06 14:52:13 by tiskow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#ifndef __FT_POINT_H
+# define __FT_POINT_H
 
-void	ft_putstr(char *str)
+typedef	struct	s_point
 {
-	int i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		ft_putchar(str[i]);
-		i++;
-	}
-}
+	int		x;
+	int		y;
+}				t_point;
+void			set_point(t_point *point);
+#endif
